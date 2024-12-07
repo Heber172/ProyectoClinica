@@ -1,0 +1,79 @@
+
+/*********************************************************/
+ESTOS SON LOS CAMBIOS QUE SE DEBEN HACER EN EL ARCHIVO
+
+Paso 1: Cambiar el nombre del modelo
+Renombra el archivo del modelo User.php a Usuario.php. Puedes 
+hacerlo manualmente o utilizando el siguiente comando en la 
+terminal:
+
+    mv app/User.php app/Usuario.php
+
+Abre el archivo app/Usuario.php y asegúrate de cambiar el 
+nombre de la clase de User a Usuario:
+
+Y FINALMENTE SE DEBE HACER UN CAMBIO EN EL ARCHIVO 
+    /config/auth.php
+donde se debe modificar los users por usuario
+
+/*********************************************************/
+
+'providers' => [
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Usuario::class,
+    ],
+
+    // 'users' => [
+    //     'driver' => 'database',
+    //     'table' => 'users',
+    // ],
+],
+
+
+
+/*********************************************************/
+VALIDATE DE VUE (para la versión 2)
+ npm install vuelidate@0.7.5 --save
+
+/*********************************************************/
+adicion de paginación
+comando:
+npm install laravel-vue-pagination@2.3.1 --save
+
+
+/*********************************************************/
+Para el uso de transición de vista, se recomienda usar
+trasition
+npm install vue-page-transition@0.2.2
+ejemplo:
+<transition name="fade">
+    <router-view/>
+</transition>
+
+además, se debe adicionar los siguiente estilos para tener
+una vista de cambio suave
+<style>
+.fade-enter {
+    opacity: 0;
+}
+.fade-enter-active {
+    transition: opacity .6s ease-out;
+}
+</style>
+
+
+/*********************************************************/
+* INSTALACIÓN DE SELECT2
+# Instalar las dependencias:
+
+npm install select2
+
+# También, instala el paquete Vue-Select para integrar Select2 con Vue.js:
+
+npm install vue-select@latest
+
+configurar en APP.js
+window.Vue = require('vue');
+import VueSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';

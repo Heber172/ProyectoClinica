@@ -1,0 +1,37 @@
+.pointer{
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/****** Scroll ******/
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aca2a2; 
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #7885dd; 
+}
+::-webkit-scrollbar:vertical {
+    height: 10px;
+}
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+/* Adición de Negrilla */
+.text-show {
+    font-weight: 500;
+}
